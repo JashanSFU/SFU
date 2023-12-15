@@ -1,0 +1,5 @@
+LetIn "f" (TArr TInt (TArr TBool TInt)) (Abs "x" TInt (Abs "y" TBool (Var "x"))) (App (App (Var "f") (CInt 1)) (CBool True))
+LetIn "f" (TArr TInt (TArr TBool TInt)) (Abs "x" TInt (Abs "y" TBool (Var "x"))) (App (Var "f") (CInt 1))
+LetIn "f" (TArr (TArr TInt TInt) TInt) (Abs "g" (TArr TInt TInt) (App (Var "g") (CInt 1))) (App (Var "f") (Abs "x" TInt (Var "x")))
+LetIn "f" (TArr TInt TInt) (Abs "x" TInt (ITE (Equal (Var "x") (CInt 0)) (CInt 0) (Plus (Var "x") (App (Var "f") (Minus (Var "x") (CInt 1)))))) (App (Var "f") (CInt 3))
+LetIn "f" (TArr TInt TInt) (Abs "x" TInt (ITE (Equal (Var "x") (CInt 0)) (CInt 1) (CInt 2))) (App (Var "f") (CInt 3))

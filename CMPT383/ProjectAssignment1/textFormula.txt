@@ -1,0 +1,4 @@
+Const True
+Iff (Var "x") (Var "y")
+And (Var "x1") (Not (Var "x2"))
+Not (Imply (Var "p") (Imply (Var "q") (Var "p")))
