@@ -1,0 +1,7 @@
+* implementing CNN (convolutional neural network) 
+* making numerical character recognition system trained on MNIST dataset
+
+
+
+** CNN has typically four layers
+- Fully connected layer? 
