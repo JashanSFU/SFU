@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./PythonCode/Hardware_components"
+    ]
+}
