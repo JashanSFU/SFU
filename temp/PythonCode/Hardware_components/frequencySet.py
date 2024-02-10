@@ -1,35 +1,35 @@
-from ast import List
-# import time
-import Parameters.constants as Constants
-import sys
-import os
-from time import sleep  
-submodule_path = os.path.join(os.path.dirname(__file__), '..', '..', 'Diligent_WaveForms_SDK')
-sys.path.append(submodule_path)
+# from ast import List
+# # import time
+# import Parameters.constants as Constants
+# import sys
+# import os
+# from time import sleep  
+# submodule_path = os.path.join(os.path.dirname(__file__), '..', '..', 'Diligent_WaveForms_SDK')
+# sys.path.append(submodule_path)
 
-from WF_SDK import wavegen, device, error
+# from WF_SDK import wavegen, device, error
 
 def set_frequency(frequencies: []):
-    device_data = Constants.device_data
-    if len(frequencies) == 1:
-        try:
-            wavegen.generate(device_data, channel=1, function=wavegen.function.sine, offset = 0 , frequency=frequencies[0], amplitude=5)
-            sleep(10)
-            # device.close(device_data)
-        except error as e:
-            print(e)
-    else:
-        try:
-            while True:
-                for frequency in frequencies:
-                    # device_data = device.open()
-                    wavegen.generate(device_data, channel=1, function=wavegen.function.sine, offset = 0 , frequency=frequency, amplitude=5)
-                    sleep(0.01)
-                    # if(frequency == 23e6):
-                    #     print("3rd option")
-                    # device.close(device_data)
-        except error as e:
-            print(f"Error generating signal for frequencies {frequencies}: {e}")
+    # device_data = Constants.device_data
+    # if len(frequencies) == 1:
+    #     try:
+    #         wavegen.generate(device_data, channel=1, function=wavegen.function.sine, offset = 0 , frequency=frequencies[0], amplitude=5)
+    #         sleep(10)
+    #         # device.close(device_data)
+    #     except error as e:
+    #         print(e)
+    # else:
+    #     try:
+    #         while True:
+    #             for frequency in frequencies:
+    #                 # device_data = device.open()
+    #                 wavegen.generate(device_data, channel=1, function=wavegen.function.sine, offset = 0 , frequency=frequency, amplitude=5)
+    #                 sleep(0.01)
+    #                 # if(frequency == 23e6):
+    #                 #     print("3rd option")
+    #                 # device.close(device_data)
+    #     except error as e:
+    #         print(f"Error generating signal for frequencies {frequencies}: {e}")
     return 0
      
     # """-----------------------------------"""
